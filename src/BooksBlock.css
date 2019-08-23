@@ -1,0 +1,63 @@
+.books-block{
+width: 100%;
+height: auto;
+}
+
+.books-block .header{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+height: 30px;
+border-bottom: 1px solid grey;
+padding-bottom: 20px;
+}
+
+.books-block .header h3{
+margin: 0;
+}
+
+.books-block .header button{
+width: 200px;
+}
+
+.books-block .middle{
+ width: 100%;
+ display: flex;
+ justify-content: space-between;
+ padding: 20px 0;
+}
+
+.books-block .middle .sort{
+width: 18%;
+display: flex;
+justify-content: space-between;
+}
+
+.books-block .middle .sort select{
+    width: 100px;
+}
+
+.books-block .middle .sort button{
+    width: 60px;
+}
+
+.books-block .middle .search{
+    width: 18%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.books-block .bottom{
+    width: 100%;
+}
+
+.books-block .bottom table{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.books-block .bottom table tr,th,td{
+    border: 1px solid black;
+    padding: 10px;
+}
