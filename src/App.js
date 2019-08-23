@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import BooksBlock from './BooksBlock'
+import ModalBook from './ModalBook'
 
 class App extends React.Component {
   constructor(props) {
@@ -21,6 +22,7 @@ class App extends React.Component {
         </div>
         <div className="content">
              <BooksBlock/>
+             <ModalBook/>
         </div>
       </div>
     );

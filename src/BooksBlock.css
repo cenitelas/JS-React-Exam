@@ -28,9 +28,10 @@ width: 200px;
 }
 
 .books-block .middle .sort{
-width: 18%;
-display: flex;
-justify-content: space-between;
+    width: 240px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .books-block .middle .sort select{
@@ -42,7 +43,8 @@ justify-content: space-between;
 }
 
 .books-block .middle .search{
-    width: 18%;
+    width: 240px;
+    height: 20px;
     display: flex;
     justify-content: space-between;
 }

@@ -24,10 +24,13 @@ class BooksBlock extends React.Component {
     super(props);
     this.state={
         books:[],
-        searchTag:'id'
+        searchTag:'id',
+        editView:false,
+        modalContext:''
     }
     this.onChangeSelect = this.onChangeSelect.bind(this);
     this.searchBook = this.searchBook.bind(this);
+    this.bookEditView = this.bookEditView.bind(this);
   }
 
   componentDidMount(){
@@ -45,6 +48,17 @@ class BooksBlock extends React.Component {
     this.setState({books:books});
   }
   
+  bookEditView(e){
+    var book = {};
+    booksArray.forEach(function(item){
+        if(item.id===e){
+          book=e;
+        }
+    });
+    
+
+  }
+
   onChangeSelect(e){
     var books = this.state.books;
        books = books.sort(function (a, b) {
@@ -100,7 +114,7 @@ class BooksBlock extends React.Component {
                         <td>{item.publish}</td>
                         <td>{item.pages}</td>
                         <td>{item.count}</td>
-                        <td><button>EDIT</button></td>
+                        <td><button key={item.id} onClick={()=>this.bookEditView(item.id)}>EDIT</button></td>
                     </tr>
                 )}
                 <tr>
