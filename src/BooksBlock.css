@@ -1,3 +1,8 @@
+
+.books-block *{
+    position: relative;
+}
+
 .books-block{
 width: 100%;
 height: auto;
@@ -28,7 +33,7 @@ width: 200px;
 }
 
 .books-block .middle .sort{
-    width: 240px;
+    width: 170px;
     height: 20px;
     display: flex;
     justify-content: space-between;
