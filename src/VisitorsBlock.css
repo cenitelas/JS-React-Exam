@@ -1,0 +1,69 @@
+.visitors-block *{
+    position: relative;
+}
+
+.visitors-block{
+width: 100%;
+height: auto;
+}
+
+.visitors-block .header{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+height: 30px;
+border-bottom: 1px solid grey;
+padding-bottom: 20px;
+}
+
+.visitors-block .header h3{
+margin: 0;
+}
+
+.visitors-block .header button{
+width: 200px;
+}
+
+.visitors-block .middle{
+ width: 100%;
+ display: flex;
+ justify-content: space-between;
+ padding: 20px 0;
+}
+
+.visitors-block .middle .sort{
+    width: 170px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.visitors-block .middle .sort select{
+    width: 100px;
+}
+
+.visitors-block .middle .sort button{
+    width: 60px;
+}
+
+.visitors-block .middle .search{
+    width: 240px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.visitors-block .bottom{
+    width: 100%;
+}
+
+.visitors-block .bottom table{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.visitors-block .bottom table tr,th,td{
+    border: 1px solid black;
+    padding: 10px;
+}

@@ -1,0 +1,61 @@
+.modal{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.534);
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+.modal .modal-context{
+    margin: 10% 0;
+    width: 600px;
+    height: 600px;
+    background-color: white;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.modal .modal-context .header{
+display: flex;
+justify-content: space-between;
+padding: 20px;
+}
+
+.modal .modal-context .header h3{
+    margin: 0;
+}
+
+.modal .modal-context .header span{
+    cursor: pointer;
+}
+
+.modal .field-close{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.modal .modal-context .content{
+    width: 90%;
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal .modal-context .content input{
+margin-bottom: 15px;
+}
+
+.modal .modal-context .content div{
+display: flex;
+justify-content: center;
+}
+
+.modal .modal-context .content div button{
+margin: 0 20px;
+}

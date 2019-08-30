@@ -1,0 +1,69 @@
+.carts-block *{
+    position: relative;
+}
+
+.carts-block{
+width: 100%;
+height: auto;
+}
+
+.carts-block .header{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+height: 30px;
+border-bottom: 1px solid grey;
+padding-bottom: 20px;
+}
+
+.carts-block .header h3{
+margin: 0;
+}
+
+.carts-block .header button{
+width: 200px;
+}
+
+.carts-block .middle{
+ width: 100%;
+ display: flex;
+ justify-content: space-between;
+ padding: 20px 0;
+}
+
+.carts-block .middle .sort{
+    width: 220px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.carts-block .middle .sort select{
+    width: 150px;
+}
+
+.carts-block .middle .sort button{
+    width: 60px;
+}
+
+.carts-block .middle .search{
+    width: 240px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.carts-block .bottom{
+    width: 100%;
+}
+
+.carts-block .bottom table{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.carts-block .bottom table tr,th,td{
+    border: 1px solid black;
+    padding: 10px;
+}

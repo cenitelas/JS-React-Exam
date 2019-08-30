@@ -6,7 +6,6 @@ class BooksBlock extends React.Component {
   constructor(props) {
     super(props);
     this.state={
-        date:props.date,
         books:[],
         searchTag:'name',
         editView:false,
@@ -25,7 +24,7 @@ class BooksBlock extends React.Component {
   }
 
   searchBook(e){
-    var books = JSON.parse(JSON.stringify(this.state.books))
+    var books = JSON.parse(localStorage.getItem('books'));
     books.forEach(function(item){
         if(!item.name.toUpperCase().startsWith(e.target.value.toUpperCase())){
             delete books[books.indexOf(item)];

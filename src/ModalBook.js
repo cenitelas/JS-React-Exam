@@ -97,7 +97,6 @@ class ModalBook extends React.Component {
 
   render() {
       const book = this.state.book;
-      console.log(this.state.isNew)
     return (
       <div className="modal">
           <div className="field-close" onClick={this.state.close}></div>
