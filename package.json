@@ -2,6 +2,7 @@
   "name": "exam",
   "version": "0.1.0",
   "private": true,
+  "homepage" : "https://cenitelas.github.io/JS-React-Exam/build/",
   "dependencies": {
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
