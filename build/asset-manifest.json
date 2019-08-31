@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.61daadb9.chunk.css",
-    "main.js": "/static/js/main.779675b1.chunk.js",
-    "main.js.map": "/static/js/main.779675b1.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.11c8eecd.js",
-    "runtime~main.js.map": "/static/js/runtime~main.11c8eecd.js.map",
-    "static/js/2.e584b2e9.chunk.js": "/static/js/2.e584b2e9.chunk.js",
-    "static/js/2.e584b2e9.chunk.js.map": "/static/js/2.e584b2e9.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.941834440500eb02fe094bb36949fa38.js": "/precache-manifest.941834440500eb02fe094bb36949fa38.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.61daadb9.chunk.css.map": "/static/css/main.61daadb9.chunk.css.map"
+    "main.css": "/JS-React-Exam/build/static/css/main.61daadb9.chunk.css",
+    "main.js": "/JS-React-Exam/build/static/js/main.b23c0560.chunk.js",
+    "main.js.map": "/JS-React-Exam/build/static/js/main.b23c0560.chunk.js.map",
+    "runtime~main.js": "/JS-React-Exam/build/static/js/runtime~main.61d2dca3.js",
+    "runtime~main.js.map": "/JS-React-Exam/build/static/js/runtime~main.61d2dca3.js.map",
+    "static/js/2.e584b2e9.chunk.js": "/JS-React-Exam/build/static/js/2.e584b2e9.chunk.js",
+    "static/js/2.e584b2e9.chunk.js.map": "/JS-React-Exam/build/static/js/2.e584b2e9.chunk.js.map",
+    "index.html": "/JS-React-Exam/build/index.html",
+    "precache-manifest.f8d96af7e8ca594037e982a98854378b.js": "/JS-React-Exam/build/precache-manifest.f8d96af7e8ca594037e982a98854378b.js",
+    "service-worker.js": "/JS-React-Exam/build/service-worker.js",
+    "static/css/main.61daadb9.chunk.css.map": "/JS-React-Exam/build/static/css/main.61daadb9.chunk.css.map"
   }
 }
