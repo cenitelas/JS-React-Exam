@@ -62,6 +62,7 @@ class ModalBook extends React.Component {
       this.setState({error:true});
       return;
     }
+   
     if(book.id){
     var books = this.state.books;
     for(let i=0;i<books.length;i++){
@@ -143,6 +144,9 @@ class ModalBook extends React.Component {
                 <input type="text" onChange={(e)=>this.onChangeText(e,'pages')} value={book.pages}/>
                 <label>Count:</label>
                 <input type="text" onChange={(e)=>this.onChangeText(e,'count')} value={book.count}/>
+                {this.state.error &&
+                   <span>Error value input</span>
+                }
                 <div>
                     <button onClick={()=>this.saveBook(book)}>Save</button>
                     {this.state.isNew===false &&

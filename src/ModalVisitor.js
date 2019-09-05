@@ -23,10 +23,27 @@ class ModalVisitor extends React.Component {
       else
       this.setState({isNew:false})
   }
-  onChangeText(e,item){
+  onChangeText(e,item){     
       var visitor = this.state.visitor;
-      visitor[item]=e.target.value;
-      this.setState({visitor:visitor});
+      var num = /^\d+$/; 
+      var space = /\s/; 
+      var sub = /\W/; 
+      var word = /^\D+$/;
+      if(item!=='phone'){
+        if(word.test(e.target.value)===true){
+          visitor[item]=e.target.value;
+          this.setState({visitor:visitor});
+        }else{
+          e.target.value=e.target.value.substring(0,e.target.value.length-1);
+        }
+      }else{
+        if(num.test(e.target.value)===true || sub.test(e.target.value)===true){
+          visitor[item]=e.target.value;
+          this.setState({visitor:visitor});
+        }else{
+          e.target.value=e.target.value.substring(0,e.target.value.length-1);
+        }
+      }
   }
 
   saveVisitor(visitor){

@@ -59,3 +59,9 @@ justify-content: center;
 .modal .modal-context .content div button{
 margin: 0 20px;
 }
+
+.modal .modal-context .content span{
+    color: red;
+    font-weight: 600;
+    text-align: center;
+}
