@@ -9,7 +9,8 @@ class ModalBook extends React.Component {
         close:props.close,
         book:props.book,
         books:props.books,
-        isNew:false
+        isNew:false,
+        error:false
     }
     this.onChangeText=this.onChangeText.bind(this);
     this.saveBook = this.saveBook.bind(this);
@@ -24,31 +25,43 @@ class ModalBook extends React.Component {
       this.setState({isNew:false})
   }
   onChangeText(e,item){
-    var text = e.target.value;
-    var r = /\d+/;
-    var r2 = /^\d+$/;
-
-    if(!text.match(r))
-    if(text.length>0)
+    this.setState({error:false});
+    var book = this.state.book;
+    var num = /^\d+$/; 
+    var word = /^\D+$/;
     if(item!=='pages')
     if(item!=='count')
-    if(item!=='year'){
-      var book = this.state.book;
+    if(item!=='year')
+    if(word.test(e.target.value)===true){
       book[item]=e.target.value;
       this.setState({book:book});
+    }else{
+      e.target.value=e.target.value.substring(0,e.target.value.length-1);
     }
+  
     if(item!=='name')
     if(item!=='author')
-    if(item!=='publish'){
-      if(r2.test(text)){
-        var book = this.state.book;
-        book[item]=e.target.value;
-        this.setState({book:book});
-      }
-    }
+    if(item!=='publish')
+    if(num.test(e.target.value)===true){
+      book[item]=e.target.value;
+      this.setState({book:book});
+    }else{
+      e.target.value=e.target.value.substring(0,e.target.value.length-1);
+    } 
   }
 
   saveBook(book){
+    var count = 0;
+
+    for(var prop in book) {
+        if(book.hasOwnProperty(prop))
+            count++;
+    }
+
+    if(count<6){
+      this.setState({error:true});
+      return;
+    }
     if(book.id){
     var books = this.state.books;
     for(let i=0;i<books.length;i++){

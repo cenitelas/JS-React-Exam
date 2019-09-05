@@ -93,7 +93,7 @@ class App extends React.Component {
               <li onClick={()=>this.getPage(<BooksBlock key={this.state.key}/>)}>Books</li>
               <li onClick={()=>this.getPage(<VisitorsBlock key={this.state.key}/>)}>Visitors</li>
               <li onClick={()=>this.getPage(<CartsBlock key={this.state.key}/>)}>Cards</li>
-              <li onClick={()=>this.getPage(<StatisticBlock/>)}>Statistics</li>
+              <li onClick={()=>this.getPage(<StatisticBlock key={this.state.key}/>)}>Statistics</li>
             </ul>
           </div>
           <div className="content">

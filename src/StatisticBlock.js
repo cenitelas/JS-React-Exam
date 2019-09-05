@@ -95,8 +95,8 @@ class StatisticBlock extends React.Component {
   render() {
     return (     
       <div className="statistic-block">
-        {this.getTopBooks()};
-        {this.getTopVisitors()};
+        {this.getTopBooks()}
+        {this.getTopVisitors()}
       </div>
     );
   }
