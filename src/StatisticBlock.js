@@ -40,7 +40,7 @@ class StatisticBlock extends React.Component {
 
           return 0;
     })
-
+    sortCart = sortCart.slice(0,5);
     return(
         <table>
             <caption>TOP 5 BOOKS</caption>
@@ -80,6 +80,8 @@ class StatisticBlock extends React.Component {
           return 0;
     })
 
+    sortCart = sortCart.slice(0,5);
+    
     return(
         <table>
             <caption>TOP 5 VISITORS</caption>

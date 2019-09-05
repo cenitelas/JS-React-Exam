@@ -9,7 +9,8 @@ class ModalVisitor extends React.Component {
         close:props.close,
         visitor:props.visitor,
         visitors:props.visitors,
-        isNew:false
+        isNew:false,
+        error:false
     }
     this.onChangeText=this.onChangeText.bind(this);
     this.saveVisitor = this.saveVisitor.bind(this);
@@ -24,10 +25,9 @@ class ModalVisitor extends React.Component {
       this.setState({isNew:false})
   }
   onChangeText(e,item){     
+    this.setState({error:false});
       var visitor = this.state.visitor;
-      var num = /^\d+$/; 
-      var space = /\s/; 
-      var sub = /\W/; 
+      var num = /^[0-9\s-]+$/; 
       var word = /^\D+$/;
       if(item!=='phone'){
         if(word.test(e.target.value)===true){
@@ -37,7 +37,7 @@ class ModalVisitor extends React.Component {
           e.target.value=e.target.value.substring(0,e.target.value.length-1);
         }
       }else{
-        if(num.test(e.target.value)===true || sub.test(e.target.value)===true){
+        if(num.test(e.target.value)===true){
           visitor[item]=e.target.value;
           this.setState({visitor:visitor});
         }else{
@@ -47,6 +47,18 @@ class ModalVisitor extends React.Component {
   }
 
   saveVisitor(visitor){
+    var count = 0;
+
+    for(var prop in visitor) {
+        if(visitor.hasOwnProperty(prop))
+            count++;
+    }
+
+    if(count<2){
+      this.setState({error:true});
+      return;
+    }
+
     if(visitor.id){
     var visitors = this.state.visitors;
     for(let i=0;i<visitors.length;i++){
@@ -120,6 +132,9 @@ class ModalVisitor extends React.Component {
                 <input type="text" onChange={(e)=>this.onChangeText(e,'name')} value={visitor.name}/>
                 <label>Phone:</label>
                 <input type="text" onChange={(e)=>this.onChangeText(e,'phone')} value={visitor.phone}/>
+                {this.state.error &&
+                   <span>Error value input</span>
+                }
                 <div>
                     <button onClick={()=>this.saveVisitor(visitor)}>Save</button>
                     {this.state.isNew===false &&
