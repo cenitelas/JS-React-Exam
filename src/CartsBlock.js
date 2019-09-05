@@ -69,7 +69,7 @@ class CartsBlock extends React.Component {
   onChangeSelect(e){
     var carts = this.state.carts;
     carts = carts.sort(function (a, b) {
-           return a[e.target.value].localeCompare(b[e.target.value]);
+           return a[e.target.value].name.localeCompare(b[e.target.value].name);
        })
 
     this.setState({carts:carts,searchTag:e.target.value});
@@ -90,8 +90,8 @@ class CartsBlock extends React.Component {
               <div className="sort">
                   <label>Sort by:</label>
                   <select value={this.state.searchTag} onChange={(e)=>this.onChangeSelect(e)}>             
-                    <option value="visitor.name">VISITOR NAME</option>
-                    <option value="book.name">BOOK NAME</option>
+                    <option value="visitor">VISITOR NAME</option>
+                    <option value="book">BOOK NAME</option>
                 </select>
               </div>
               <div className="search">
