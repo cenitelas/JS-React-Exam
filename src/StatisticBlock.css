@@ -1,0 +1,17 @@
+.statistic-block{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.statistic-block table{
+    width: 49%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.statistic-block table tr,th,td{
+    border: 1px solid black;
+    padding: 10px;
+}

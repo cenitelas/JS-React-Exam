@@ -3,6 +3,7 @@ import './App.css';
 import BooksBlock from './BooksBlock'
 import VisitorsBlock from './VisitorsBlock';
 import CartsBlock from './CartsBlock';
+import StatisticBlock from './StatisticBlock';
 
 var booksArray = [{
   id:"1",
@@ -92,7 +93,7 @@ class App extends React.Component {
               <li onClick={()=>this.getPage(<BooksBlock key={this.state.key}/>)}>Books</li>
               <li onClick={()=>this.getPage(<VisitorsBlock key={this.state.key}/>)}>Visitors</li>
               <li onClick={()=>this.getPage(<CartsBlock key={this.state.key}/>)}>Cards</li>
-              <li>Statistics</li>
+              <li onClick={()=>this.getPage(<StatisticBlock/>)}>Statistics</li>
             </ul>
           </div>
           <div className="content">

@@ -73,9 +73,17 @@ class ModalBook extends React.Component {
         books.splice(i, 1);
       }
     }
+    var carts = JSON.parse(localStorage.getItem('carts'));
+    for(let i=0;i<carts.length;i++){
+      if(carts[i].book.id===book.id){
+        carts.splice(i, 1);
+      }
+    }
     this.setState({books:books});
     localStorage.removeItem("books")
     localStorage.setItem('books', JSON.stringify(books));
+    localStorage.removeItem("carts")
+    localStorage.setItem('carts', JSON.stringify(carts));
     this.state.close();
   }
 

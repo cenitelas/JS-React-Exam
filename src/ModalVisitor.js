@@ -54,9 +54,17 @@ class ModalVisitor extends React.Component {
         visitors.splice(i, 1);
       }
     }
+    var carts = JSON.parse(localStorage.getItem('carts'));
+    for(let i=0;i<carts.length;i++){
+      if(carts[i].visitor.id===visitor.id){
+        carts.splice(i, 1);
+      }
+    }
     this.setState({visitors:visitors});
     localStorage.removeItem("visitors")
     localStorage.setItem('visitors', JSON.stringify(visitors));
+    localStorage.removeItem("carts")
+    localStorage.setItem('carts', JSON.stringify(carts));
     this.state.close();
   }
 
