@@ -26,9 +26,10 @@ class BooksBlock extends React.Component {
   searchBook(e){
     var books = JSON.parse(localStorage.getItem('books'));
     books.forEach(function(item){
-        if(!item.name.toUpperCase().startsWith(e.target.value.toUpperCase())){
-            delete books[books.indexOf(item)];
-        }
+        if(!item.name.toUpperCase().startsWith(e.target.value.toUpperCase()))
+          if(!item.author.toUpperCase().startsWith(e.target.value.toUpperCase()))
+            if(!item.publish.toUpperCase().startsWith(e.target.value.toUpperCase()))
+              delete books[books.indexOf(item)];
     });
 
     this.setState({books:books});
@@ -101,7 +102,7 @@ class BooksBlock extends React.Component {
                         <td>{item.publish}</td>
                         <td>{item.pages}</td>
                         <td>{item.count}</td>
-                        <td><button key={item.id} onClick={()=>this.showModalBook(item.id)}>EDIT</button></td>
+                        <td><span key={item.id} onClick={()=>this.showModalBook(item.id)}>&#128393;</span></td>
                     </tr>
                 )}
                 <tr>

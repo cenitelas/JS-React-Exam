@@ -66,15 +66,15 @@ class App extends React.Component {
   }
 
   componentDidMount(){
-    if(!localStorage.getItem('books')){
+    if(localStorage.getItem('books')==null){
        localStorage.setItem('books', JSON.stringify(booksArray));
     }
 
-    if(!localStorage.getItem('visitors')){
+    if(localStorage.getItem('visitors')==null){
       localStorage.setItem('visitors', JSON.stringify(visitorsArray));
     }
 
-    if(!localStorage.getItem('carts')){
+    if(localStorage.getItem('carts')==null){
       localStorage.setItem('carts', JSON.stringify(cartsArray));
     }
   }

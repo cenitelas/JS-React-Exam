@@ -115,7 +115,7 @@ class CartsBlock extends React.Component {
                         {item.dateGive ?(    
                              <td>{item.dateGive}</td>
                         ) : (
-                             <td><button key={item.id} onClick={()=>this.returnBook(item)}>RETURN</button></td>
+                             <td><span key={item.id} onClick={()=>this.returnBook(item)}>&#9166;</span></td>
                         )}
                     </tr>
                 )}

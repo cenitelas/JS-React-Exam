@@ -27,9 +27,9 @@ class VisitorsBlock extends React.Component {
     var visitors = JSON.parse(localStorage.getItem('visitors'));
     if(e.target.value.length>0)
     visitors.forEach(function(item){
-        if(!item.name.toUpperCase().startsWith(e.target.value.toUpperCase())){
+        if(!item.name.toUpperCase().startsWith(e.target.value.toUpperCase()))
+          if(!item.phone.toUpperCase().startsWith(e.target.value.toUpperCase()))
             delete visitors[visitors.indexOf(item)];
-        }
     });
 
     this.setState({visitors:visitors});
@@ -94,7 +94,7 @@ class VisitorsBlock extends React.Component {
                         <td>{item.id}</td>
                         <td>{item.name}</td>
                         <td>{item.phone}</td>
-                        <td><button key={item.id} onClick={()=>this.showModalVisitor(item.id)}>EDIT</button></td>
+                        <td><span key={item.id} onClick={()=>this.showModalVisitor(item.id)}>&#128393;</span></td>
                     </tr>
                 )}
                 <tr>

@@ -68,3 +68,13 @@ width: 200px;
     border: 1px solid black;
     padding: 10px;
 }
+
+table span{
+font-size: 200%;
+cursor: pointer;
+color: gray;
+}
+
+table span:hover{
+   color: black;
+}
